@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FuncionariosModule } from "app/funcionarios/funcionarios.module";
 import { LoginComponent } from './login/login.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
+import { AppRoutingModule } from "app/app.routing.module";
 
 @NgModule({
   declarations: [
@@ -18,9 +19,10 @@ import { DashBoardComponent } from './dash-board/dash-board.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    FuncionariosModule
+    FuncionariosModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FuncionarioService } from "app/funcionarios/service/funcionario.service";
 
 @Component({
   selector: 'app-funcionarios',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FuncionariosComponent implements OnInit {
 
-  constructor() { }
+  private funcionarios: any[] = [];
+
+  constructor(private funcionariosService: FuncionarioService) { }
 
   ngOnInit() {
+    this.funcionarios = this.funcionariosService.getAll();
   }
-
 }
