@@ -6,7 +6,7 @@
 		</div><!-- /.container-fluid -->
 </nav>
 
-<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar" *ngIf="mostrarMenu">
 	<form role="search">
 		<div class="form-group">
 			<input type="text" class="form-control" placeholder="Busca Rápida">
@@ -18,8 +18,7 @@
 	</ul>
 	<div class="attribution">Desenvolvido por <a href="http://www.medialoot.com/item/lumino-admin-bootstrap-template/">Kolus</a><br/><a href="http://www.glyphs.co" style="color: #333;">entre em contato</a></div>
 </div><!--/.sidebar-->
-<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
-	
-	<router-outlet></router-outlet>
 
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+	<router-outlet></router-outlet>
 </div>

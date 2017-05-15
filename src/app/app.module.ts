@@ -8,6 +8,7 @@ import { FuncionariosModule } from "app/funcionarios/funcionarios.module";
 import { LoginComponent } from './login/login.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { AppRoutingModule } from "app/app.routing.module";
+import { AuthService } from "app/login/auth.service";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { AppRoutingModule } from "app/app.routing.module";
     FuncionariosModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AuthService } from "app/login/auth.service";
+import { Funcionario } from "app/model/funcionario";
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  private funcionario: Funcionario = new Funcionario();
 
-  ngOnInit() {
+  constructor(private authService: AuthService) { }
+
+  ngOnInit() {}
+
+  fazerLogin(){
+    this.authService.fazerLogin(this.funcionario);
   }
 
 }
