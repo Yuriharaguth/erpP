@@ -7,23 +7,25 @@ import { Router } from "@angular/router";
 export class AuthService {
 
   private usuarioAutenticado: boolean = false;
-  private temp: boolean = true;
   mostrarMenuEmitter = new EventEmitter<boolean>(); 
 
   constructor(private router: Router) { }
 
   fazerLogin(funcionario: Funcionario){
-      if(this.temp){  
+      if(funcionario.nome === 'yuri'){  
         this.usuarioAutenticado = true;
         this.mostrarMenuEmitter.emit(true);
       } else {
         this.mostrarMenuEmitter.emit(false);
       }
-
-      
       
       if (this.usuarioAutenticado){
         this.router.navigate(['/']);
       }
   }
+
+  usuarioEstaAutendicado(){
+    return this.usuarioAutenticado;
+  }
+  
 }
