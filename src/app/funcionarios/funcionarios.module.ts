@@ -5,6 +5,7 @@ import { DetalhesComponent } from "app/funcionarios/detalhes/detalhes.component"
 import { FormComponent } from "app/funcionarios/form/form.component";
 import { FuncionarioService } from "app/funcionarios/service/funcionario.service";
 import { FuncionariosRoutingModule } from "app/funcionarios/Funcionarios.routing.module";
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { FuncionariosRoutingModule } from "app/funcionarios/Funcionarios.routing
   declarations: [
     FuncionariosComponent,
     DetalhesComponent,
-    FormComponent
+    FormComponent,
+    ErrorComponent
   ],
   providers: [ FuncionarioService ]
 })

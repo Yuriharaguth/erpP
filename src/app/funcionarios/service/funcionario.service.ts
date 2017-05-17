@@ -16,4 +16,18 @@ export class FuncionarioService {
     return this.funcionarios;
   }
 
+  getFuncionario(id: number){
+    for (let i = 0; i < this.funcionarios.length; i++) {
+      let funcionario = this.funcionarios[i];
+      if(funcionario.id == id){
+        return funcionario;
+      }
+    }
+    return null;
+  }
+
+  setFuncionario(){
+    
+  }
+
 }

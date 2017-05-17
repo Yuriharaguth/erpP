@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FuncionarioService } from "app/funcionarios/service/funcionario.service";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: 'app-funcionarios',
@@ -10,7 +11,10 @@ export class FuncionariosComponent implements OnInit {
 
   private funcionarios: any[] = [];
 
-  constructor(private funcionariosService: FuncionarioService) { }
+  constructor(
+    private funcionariosService: FuncionarioService,
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
     this.funcionarios = this.funcionariosService.getAll();
